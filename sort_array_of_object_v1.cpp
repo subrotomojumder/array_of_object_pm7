@@ -8,7 +8,13 @@ public:
     int roll;
     int marks;
 };
-
+bool cmp(Student l, Student r)
+{
+    if (l.marks < r.marks)
+        return true;
+    else
+        return false;
+}
 int main()
 {
     int n;
@@ -20,19 +26,10 @@ int main()
         getline(cin, arr[i].name);
         cin >> arr[i].roll >> arr[i].marks;
     }
-    // int mn = INT_MAX;
-    Student mn_obj;
-    mn_obj.marks = INT_MAX;
-
+    sort(arr, arr + n, cmp);
     for (int i = 0; i < n; i++)
     {
-        if (mn_obj.marks > arr[i].marks)
-        {
-            mn_obj = arr[i];
-        }
-        // mn = min(arr[i].marks, mn);
-        // cout << arr[i].name << " " << arr[i].roll << " " << arr[i].marks << endl;
+        cout << arr[i].name << " " << arr[i].roll << " " << arr[i].marks << endl;
     }
-     cout << mn_obj.name << " " << mn_obj.roll << " " << mn_obj.marks << endl;
     return 0;
 }

@@ -1,9 +1,11 @@
-4
+5
 Sakib Khan
 12 44
 Rakib Mali
-13 40
+13 46
 Anik Janeo
-14 40
-Rakesh Khana
+14 64
+Rakesh Khan
 15 50
+Shofiq Khana
+16 54
